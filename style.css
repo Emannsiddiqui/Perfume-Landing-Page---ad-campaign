@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-color:#7B4A13;
+    display: flex;
+}
+#box1{
+    height: 100%;
+    width: 26%;
+    /* background-color: red; */
+}
+#box2{
+    height: 100%;
+    width: 67%;
+    background-image: url('primaryImg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #7b4a1342;
+}
+#box3{
+    height: 100%;
+    width: 7%;
+}
+#text-div{
+    position: absolute;
+    width: 400px;
+    left: 7%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+#text-div>h1{
+    font-size: 95px;
+    line-height: 78px;
+    letter-spacing: 8px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    color:#ffffff;
+    animation: popInRight 1s ease-out forwards;
+    transform-origin: left; 
+}
+@keyframes popInRight {
+    0% {
+        transform: scale(0) translateX(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05) translateX(20px);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateX(0); 
+    }
+}
+#small-img{
+    height: 400px;
+    width: 300px;
+    background-image: url('secondaryImg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0, -50%)
+}
+#vertical-text {
+    position: absolute;
+    transform: rotate(90deg);
+    right: -48%;
+    top: 10%;
+    overflow: hidden;
+    height: 100px;
+}
+#vertical-text h1 {
+    font-size: 70px;
+    font-weight: 900;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    animation: scrollText 15s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#nav{
+    position: absolute;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 8%;
+    top: 5%;
+    letter-spacing: 10px;
+}
+#nav img{
+    height: 60px;
+}
+#nav h5{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    animation: popInRight 1s ease-out forwards;
+}
+@keyframes popInRight {
+    0% {
+        transform: scale(0) translateX(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05) translateX(20px);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+.button {
+    position: absolute;
+    bottom: 20%; 
+    left: 7.5%;
+    padding: 15px 30px;
+    background-color: #ffffff; 
+    color: #7B4A13;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.button:hover {
+    background-color: #7B4A13; 
+    color: #ffffff; 
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
+}
+.button {
+    animation: popInButton 1s ease-out forwards;
+}
+
+@keyframes popInButton {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
